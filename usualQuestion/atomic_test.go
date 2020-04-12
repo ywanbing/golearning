@@ -16,14 +16,15 @@ import (
 3 加锁
 4 是使用单线程执行，目的是为了性能对比
 
+go test -test.bench="." -test.benchmem
 测试结果：
 goos: windows
 goarch: amd64
 
-BenchmarkAtomic-12                 42513             28111 ns/op
-BenchmarkRWMutex-12                42214             28334 ns/op
-BenchmarkChannel-12                23188             49856 ns/op
-BenchmarkSingleThread-12         1498032               806 ns/op
+BenchmarkAtomic-12                 42664             28082 ns/op              24 B/op          2 allocs/op
+BenchmarkRWMutex-12                42214             28452 ns/op              56 B/op          3 allocs/op
+BenchmarkChannel-12                24367             48412 ns/op             121 B/op          3 allocs/op
+BenchmarkSingleThread-12         1501362               801 ns/op              16 B/op          1 allocs/op
 
 */
 

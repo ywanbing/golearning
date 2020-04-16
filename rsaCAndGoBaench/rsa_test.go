@@ -16,7 +16,7 @@ import (
 
 比如Linux Unix 系统中可以不用在意C环境（自带C的所有执行库）并执行本测试。
 
-在windows上不要配置C的环境，这里不展开说明，请自行百度 “window 上 golang 运行C语言”
+在windows上要配置C的环境，这里不展开说明，请自行百度 “window 上 golang 运行C语言”
 */
 
 /*

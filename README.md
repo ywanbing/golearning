@@ -1,4 +1,5 @@
 # golearning
-常见go的一些问题，以及一些回答思路
+### 分享一些自己所遇到或者所见到的一些代码
 
-我会把每天别人提出来的问题收集到本项目中，并使用代码实现。
+- 项目架构很早，以前使用C的rsa来处理，我使用了go标准库的rsa用来压测对比了一下。 [Go和 C的 Rsa对比](https://github.com/ywanbing/golearning/tree/master/rsaCAndGoBaench "Go和 C的 Rsa对比")
+- 如果50个协程去访问全局变量并且进行+1的操作，最终这个全局变量会不会是50呢? [查看解决方案](https://github.com/ywanbing/golearning/blob/master/usualQuestion/atomic_test.go "查看解决方案")

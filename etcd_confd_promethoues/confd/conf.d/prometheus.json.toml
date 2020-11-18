@@ -1,0 +1,9 @@
+[template]
+src = "prometheus.json.tmpl"
+# 这里的路径是生成文件的路径，每个人的都不一样，需要自行修改。
+dest = "/tmp/prometheus/targets/target_test.json"
+mode = "0777"
+keys = [
+ "/metrics/registry/",
+]
+reload_cmd = "curl -XPOST 'http://127.0.0.1:9090/-/reload'"

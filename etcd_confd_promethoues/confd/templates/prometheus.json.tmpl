@@ -1,0 +1,13 @@
+[
+{{- range $index, $info := gets "/metrics/registry/*" -}}
+    {{- $data := json $info.Value -}}
+    {{- if ne $index 0 }},{{- end }}
+    {
+        "targets":  [
+            "{{$data.address}}"
+        ],
+        "labels":{
+            "instance": "{{$data.name}}"
+        }
+    }{{- end }}
+]

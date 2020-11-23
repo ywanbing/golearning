@@ -7,6 +7,6 @@
 - zap 日志框架添加日志自动切换功能 [zap-log](https://github.com/ywanbing/golearning/tree/master/zap-log "zap 自动切换")
 - 实现 AES-CBC 加密 [AES_CBC](https://github.com/ywanbing/golearning/tree/master/aesCrypto "AES-CBC 加密")
 - 实现golang项目的社区标准目录建立 [project-layout](https://github.com/ywanbing/golearning/tree/master/script "project-layout")
-- 实现 etcd + confd + promethoues 自动发现 [etcd_confd_promethoues](https://github.com/ywanbing/golearning/tree/master/etcd_confd_promethoues "etcd_confd_promethoues")
+- 实现 etcd + confd + prometheus 自动发现 [etcd_confd_prometheus](https://github.com/ywanbing/golearning/tree/master/etcd_confd_prometheus "etcd_confd_prometheus")
 ### 问题
 希望有相关的问题可以提交issues中一起学习和实现

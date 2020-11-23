@@ -1,5 +1,5 @@
 ## promethoues 的自动发现
-使用 confd 拉取 etcd 的注册信息，自动更新 promethoues 的配置。
+使用 confd 拉取 etcd 的注册信息，自动更新 prometheus 的配置。
 
 1. 安装 etcd  
     ```shell script

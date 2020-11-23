@@ -1,4 +1,4 @@
-## promethoues 的自动发现
+## prometheus 的自动发现
 使用 confd 拉取 etcd 的注册信息，自动更新 prometheus 的配置。
 
 1. 安装 etcd  
@@ -22,11 +22,11 @@
 ```shell script
  confd -confdir ./confd/ -config-file ./confd/conf.d/prometheus.json.toml -backend etcdv3  -watch -node http://127.0.0.1:2379  &
 ```
-发现下面错误是和正常的因为还没有启动 promethoues 。
+发现下面错误是和正常的因为还没有启动 prometheus 。
 ```shell script
 curl: (7) Failed to connect to 127.0.0.1 port 9090: Connection refused
 ```
-### 启动 promethoues 
+### 启动 prometheus 
 
 通过 prometheus.yml 覆盖 /etc/prometheus/prometheus.yml 的文件，没有就复制过去。   
 创建一个保存数据的文件夹 
@@ -40,4 +40,4 @@ prometheus --web.enable-lifecycle \
     --storage.tsdb.path=/prometheus
 ```
 
-这个时候就完成了，你可以增加或者减少服务来查看 promethoues 的动态变化。
+这个时候就完成了，你可以增加或者减少服务来查看 prometheus 的动态变化。

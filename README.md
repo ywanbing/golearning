@@ -10,6 +10,7 @@
 - 实现 etcd + confd + prometheus 自动发现 [etcd_confd_prometheus](https://github.com/ywanbing/golearning/tree/master/etcd_confd_prometheus "etcd_confd_prometheus")
 - 实现golang脚本调用，使用 c 语言的接口，为什么使用的原因，懂的都懂 [go_c_script](https://github.com/ywanbing/golearning/tree/master/goloang_c_script "goloang_c_script")
 - 实现 tcp 文件传输工具，在局域网可达超快速度，支持超大文件传输，且只使用很小的内存 [file_transport](https://github.com/ywanbing/golearning/tree/master/file_transport "file transport") 
+- 修改 goimports 只区分官方和非官方包的分组 [goimports](https://github.com/ywanbing/golearning/tree/master/goimports "goimports") 
 
 ### 问题
 希望有相关的问题可以提交issues中一起学习和实现

@@ -12,6 +12,7 @@
 - 实现 tcp 文件传输工具，在局域网可达超快速度，支持超大文件传输，且只使用很小的内存 [file_transport](https://github.com/ywanbing/golearning/tree/master/file_transport "file transport") 
 - 修改 goimports 只区分官方和非官方包的分组 [goimports](https://github.com/ywanbing/golearning/tree/master/goimports "goimports") 
 - 通过 go 编写一个程序来实现 cpu 使用率在一定的时间内维持 50%。 [cpu50](https://github.com/ywanbing/golearning/tree/master/cpu50 "cpu50")
+- 学习`chan`的源码，通过`chan`原理流程图，事半功倍。[chan_flowChart](https://github.com/ywanbing/golearning/tree/master/chan_flow_chart "chan_flow_chart")
 
 ### 问题
 希望有相关的问题可以提交issues中一起学习和实现

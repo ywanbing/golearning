@@ -1,0 +1,103 @@
+run:
+  timeout: 1m
+  tests: false
+
+linters:
+  disable-all: true
+  enable:
+    - typecheck
+    - staticcheck
+    - govet
+    - gocritic
+
+linters-settings:
+  govet:
+    check-shadowing: true
+    disable-all: true
+    enable:
+      - asmdecl
+      - assign
+      - atomic
+      - atomicalign
+      - bools
+      - buildtag
+      - cgocall
+      - composites
+      - copylocks
+      - httpresponse
+      - loopclosure
+      - lostcancel
+      - nilfunc
+      - nilness
+      - printf
+      - shadow
+      - shift
+      - stdmethods
+      - structtag
+      - tests
+      - unmarshal
+      - unreachable
+      - unsafeptr
+      - unusedresult
+
+  staticcheck:
+    go: "1.17"
+    checks: [ "all", "-SA3*", "-SA6000", "-SA6001", "-SA6003", "-ST*", "ST1006", "ST1008", "ST1016", "-QF1" ]
+
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - experimental
+      - opinionated
+      - style
+    disabled-tags:
+      - performance
+    disabled-checks:
+      - assignOp
+      - badLock
+      - badRegexp
+      - codegenComment
+      - commentedOutCode
+      - docStub
+      - dupArg
+      - dupBranchBody
+      - dupCase
+      - dupImport
+      - equalFold
+      - exitAfterDefer
+      - externalErrorReassign
+      - flagDeref
+      - hexLiteral
+      - ifElseChain
+      - importShadow
+      - initClause
+      - mapKey
+      - nestingReduce
+      - newDeref
+      - preferDecodeRune
+      - preferFprint
+      - preferStringWriter
+      - preferWriteByte
+      - redundantSprint
+      - regexpMust
+      - regexpPattern
+      - regexpSimplify
+      - ruleguard
+      - sliceClear
+      - sloppyLen
+      - sloppyTypeAssert
+      - sortSlice
+      - sprintfQuotedString
+      - sqlQuery
+      - stringConcatSimplify
+      - syncMapLoadAndDelete
+      - tooManyResultsChecker
+      - typeDefFirst
+      - typeUnparen
+      - underef
+      - unlabelStmt
+      - unlambda
+      - unnecessaryBlock
+      - unnecessaryDefer
+      - yodaStyleExpr
+      - whyNoLint

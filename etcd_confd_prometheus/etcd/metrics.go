@@ -2,18 +2,19 @@ package metrics
 
 import (
 	"encoding/json"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"log"
 	"net"
 	"net/http"
 	"sync"
+
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 var (
 	DefEtcdName = "/metrics/registry/"
 )
 
-// 指标注册
+// RegisterMetrics 指标注册
 type RegisterMetrics struct {
 	s        *ServiceRegister
 	ri       *RegisterInfo
@@ -25,7 +26,7 @@ type RegisterInfo struct {
 	Address string `json:"address"`
 }
 
-// 创建 注册信息
+// NewRegisterMetrics 创建 注册信息
 func NewRegisterMetrics(name string) *RegisterMetrics {
 	return &RegisterMetrics{
 		ri: &RegisterInfo{
@@ -33,7 +34,7 @@ func NewRegisterMetrics(name string) *RegisterMetrics {
 		}}
 }
 
-// 关闭注册信息
+// Close 关闭注册信息
 func (r *RegisterMetrics) Close() {
 	if r == nil {
 		return
@@ -47,7 +48,7 @@ func (r *RegisterMetrics) Close() {
 	log.Printf("%v for etcd closed ... ", r.ri.Name)
 }
 
-// 开始注册信息
+// Register 开始注册信息
 //
 // etcd 的服务地址
 //
@@ -71,7 +72,7 @@ func (r *RegisterMetrics) Register(endpoints ...string) error {
 			r.listener.Close()
 			return err
 		}
-		//监听续租相应chan
+		// 监听续租相应chan
 		go func() {
 			r.s.ListenLeaseRespChan()
 			log.Printf("%v close renewal ... ", r.ri.Name)
@@ -82,9 +83,9 @@ func (r *RegisterMetrics) Register(endpoints ...string) error {
 
 var o sync.Once
 
-// 开启指标并注册到 etcd 中。
-//
-// metricsAddr 默认给空 则随机端口。
+// StartMetrics
+// 	开启指标并注册到 etcd 中。
+// 	metricsAddr 默认给空 则随机端口。
 func (r *RegisterMetrics) StartMetrics(etcdAddr, metricsAddr string) error {
 	var err error
 	o.Do(func() {

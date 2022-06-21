@@ -15,6 +15,7 @@
 - 学习`chan`的源码，通过`chan`原理流程图，事半功倍。[chan_flowChart](https://github.com/ywanbing/golearning/tree/master/chan_flow_chart "chan_flow_chart")
 - `golangci-lint`的中文规则介绍，通过`golangci-lint.yml`配置的默认规则。[golangci-lint](https://github.com/ywanbing/golearning/tree/master/golangci-lint "golangci-lint")
 - 实现互斥锁的额外功能[lock](https://github.com/ywanbing/golearning/tree/master/lock "lock")
+- 通过 python 批量转换xls到xlsx文件格式，目前只能在win上运行 [xls2xlsx](https://github.com/ywanbing/golearning/tree/master/lock/xls2xlsx "xls2xlsx")
 
 ### 问题
 希望有相关的问题可以提交issues中一起学习和实现
